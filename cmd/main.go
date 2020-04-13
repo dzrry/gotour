@@ -5,7 +5,9 @@ import (
 	"github.com/dzrry/gotour/task2"
 	"github.com/dzrry/gotour/task3"
 	"github.com/dzrry/gotour/task5"
+	"github.com/dzrry/gotour/task7"
 	"golang.org/x/tour/pic"
+	"golang.org/x/tour/reader"
 	"golang.org/x/tour/wc"
 )
 
@@ -22,4 +24,6 @@ func main() {
 	for name, ip := range hosts {
 		fmt.Printf("%v: %v\n", name, ip)
 	}
+	//task 7 reader
+	reader.Validate(task7.MyReader{})
 }
