@@ -7,6 +7,7 @@ import (
 	"github.com/dzrry/gotour/task5"
 	"github.com/dzrry/gotour/task7"
 	"github.com/dzrry/gotour/task8"
+	"github.com/dzrry/gotour/task9"
 	"golang.org/x/tour/pic"
 	"golang.org/x/tour/reader"
 	"golang.org/x/tour/wc"
@@ -34,4 +35,11 @@ func main() {
 	s := strings.NewReader("Lbh penpxrq gur pbqr!")
 	r := task8.Rot13Reader{s}
 	io.Copy(os.Stdout, &r)
+	//task 9 image
+	i := &task9.Image{
+		Width:  100,
+		Height: 100,
+		Clr:    100,
+	}
+	pic.ShowImage(i)
 }
