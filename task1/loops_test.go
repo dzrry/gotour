@@ -27,11 +27,16 @@ func TestSqrt(t *testing.T) {
 			inputValue:    25,
 			expectedValue: 5,
 		},
+		{
+			name:          "negative",
+			inputValue:    -10,
+			expectedValue: 0,
+		},
 	}
 
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			actualValue := Sqrt(tc.inputValue)
+			actualValue, _ := Sqrt(tc.inputValue)
 			diff := math.Abs(tc.expectedValue - actualValue)
 			if diff > delta {
 				t.Errorf("Actual is not in delta range: \n"+
