@@ -9,9 +9,8 @@ func TestSqrt(t *testing.T) {
 	const delta = 0.5
 
 	testCases := []struct {
-		name          string
-		inputValue    float64
-		expectedValue float64
+		name                      string
+		inputValue, expectedValue float64
 	}{
 		{
 			name:          "two",
