@@ -6,9 +6,13 @@ import (
 	"github.com/dzrry/gotour/task3"
 	"github.com/dzrry/gotour/task5"
 	"github.com/dzrry/gotour/task7"
+	"github.com/dzrry/gotour/task8"
 	"golang.org/x/tour/pic"
 	"golang.org/x/tour/reader"
 	"golang.org/x/tour/wc"
+	"io"
+	"os"
+	"strings"
 )
 
 func main() {
@@ -26,4 +30,8 @@ func main() {
 	}
 	//task 7 reader
 	reader.Validate(task7.MyReader{})
+	//task 8 rot13
+	s := strings.NewReader("Lbh penpxrq gur pbqr!")
+	r := task8.Rot13Reader{s}
+	io.Copy(os.Stdout, &r)
 }

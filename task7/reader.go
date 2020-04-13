@@ -8,8 +8,8 @@ func (r MyReader) Read(b []byte) (int, error) {
 	if len(b) == 0 {
 		return 0, io.ErrShortBuffer
 	}
-	for idx := range b {
-		b[idx] = 'A'
+	for i := range b {
+		b[i] = 'A'
 	}
 	return len(b), nil
 }
