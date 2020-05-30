@@ -42,4 +42,5 @@ func main() {
 		Clr:    100,
 	}
 	pic.ShowImage(i)
+	fmt.Println("test")
 }
